@@ -76,11 +76,11 @@ class CitramanikWindow(QMainWindow, Ui_Citramanik):
 
         self.checkbox_flatpak.toggled.connect(self.__on_flatpak_toggled)
 
-        self.combo_export_mode.currentIndexChanged.connect(self.handlePAGE)
+        self.combo_export_mode.currentIndexChanged.connect(self.handle_page)
         self.checkBox_JPG.toggled.connect(self.__on_jpg_toggled)
         self.checkBox_PNG.toggled.connect(self.__on_png_toggled)
 
-    def handlePAGE(self):
+    def handle_page(self):
         if self.combo_export_mode.currentIndex() == 0:
             self.options.pageOnly = False
             self.field_pattern.setDisabled(False)
